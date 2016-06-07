@@ -482,4 +482,3 @@ function view_message()
 //ADD SHORTCODES
 add_shortcode('front-end-pm', array(fep_main_class::init(), 'main_shortcode_output' )); //for FRONT END PM
 
-

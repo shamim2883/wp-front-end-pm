@@ -1,6 +1,14 @@
-jQuery( document ).on( "keyup", "#fep-message-top", function() {	
-				document.getElementById('fep-result').style.display="none";
-				jQuery('.fep-ajax-img').show();
+var fep_delay = (function(){
+  var timer = 0;
+  return function(callback, ms){
+    clearTimeout (timer);
+    timer = setTimeout(callback, ms);
+  };
+})();
+jQuery( document ).on( "keyup", "#fep-message-top", function() {
+		fep_delay(function(){
+				jQuery('#fep-result').hide();
+				jQuery('#fep-message-top').addClass('fep-loading-gif');
 					var display_name=jQuery('#fep-message-top').val();
 					var data = {
 									action: 'fep_autosuggestion_ajax',
@@ -9,18 +17,20 @@ jQuery( document ).on( "keyup", "#fep-message-top", function() {
 									};
 									
 		jQuery.post(fep_script.ajaxurl, data, function(results) {
-			jQuery('.fep-ajax-img').hide();
+			jQuery('#fep-message-top').removeClass('fep-loading-gif');
 			jQuery('#fep-result').html(results);
-			document.getElementById('fep-result').style.display="block";
-			if (results=='')
-			{document.getElementById('fep-result').style.display="none";}
+			if ( results ){
+				jQuery('#fep-result').show();
+			}
 			
 			});
+					   }, 1000 );
 				});
 
 function fep_fill_autosuggestion(login, display) {
 	
-	document.getElementById('fep-message-to').value=login;
-	document.getElementById('fep-message-top').value=display;
-	document.getElementById('fep-result').style.display="none";
+	jQuery('#fep-message-to').val( login );
+	jQuery('#fep-message-top').val( display );
+	jQuery('#fep-result').hide();
 }
+
