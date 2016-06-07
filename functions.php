@@ -864,7 +864,7 @@ function fep_notification()
 			
 
 function fep_notification_div() {
-	if ( ! is_user_logged_in() )
+	if ( ! fep_current_user_can( 'access_message' ) )
 				return;
 	if ( fep_get_option('hide_notification',0) == 1 )
 				return;
