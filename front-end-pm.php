@@ -9,7 +9,6 @@ Author URI: https://shamimbiplob.wordpress.com/contact-us/
 Text Domain: front-end-pm
 License: GPLv2 or later
 */
-
 //DEFINE
 global $wpdb;
 define('FEP_PLUGIN_DIR',plugin_dir_path( __FILE__ ));

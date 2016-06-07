@@ -1,6 +1,5 @@
 <?php
 
-
 class FEP_menu_widget extends WP_Widget {
 
 	/**

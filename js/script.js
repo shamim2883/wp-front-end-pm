@@ -33,4 +33,3 @@ function fep_fill_autosuggestion(login, display) {
 	jQuery('#fep-message-top').val( display );
 	jQuery('#fep-result').hide();
 }
-

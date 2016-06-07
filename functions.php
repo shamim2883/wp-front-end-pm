@@ -3,14 +3,14 @@
 function fep_plugin_activate(){
 
 	
-	$roles = array_keys( get_editable_roles() );
-	$options = array();
+		$roles = array_keys( get_editable_roles() );
+		$options = array();
 		
-	$options['userrole_access'] = $roles;
-	$options['userrole_new_message'] = $roles;
-	$options['userrole_reply'] = $roles;
+		$options['userrole_access'] = $roles;
+		$options['userrole_new_message'] = $roles;
+		$options['userrole_reply'] = $roles;
 		
-	update_option( 'FEP_admin_options', wp_parse_args( get_option('FEP_admin_options'), $options) );
+		update_option( 'FEP_admin_options', wp_parse_args( get_option('FEP_admin_options'), $options) );
 
 }
 

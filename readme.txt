@@ -11,7 +11,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Front End PM is a Private Messaging system and a secure contact form to your WordPress site.This is full functioning messaging system from front end.
 
 == Description ==
-
 Front End PM is a Private Messaging system to your WordPress site.This is full functioning messaging system from front end. The messaging is done entirely through the front-end of your site rather than the Dashboard. This is very helpful if you want to keep your users out of the Dashboard area.
 
 **Some Useful Link**
